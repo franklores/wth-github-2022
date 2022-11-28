@@ -6,7 +6,7 @@ env:
   registryName: "wthghtable3devopsreg.azurecr.io"
   repositoryName: "wth/dotnetcoreapp"
   dockerFolderPath: Application/src/RazorPagesTestSample
-  webappname: "wth-gh-table3-devops"
+  webappname: "wth-gh-table3-devops-dev"
   tag: ${{ github.run_number }}
 on:
   push:
@@ -72,7 +72,7 @@ jobs:
     
     - uses: azure/webapps-deploy@v2.2.4
       with:
-        app-name: '${{ env.webappname }}-dev'
+        app-name: ${{ env.webappname }}
         images: '${{ secrets.ACR_LOGIN_SERVER }}/wth/dotnetcoreapp:${{ env.tag }}'
 
 
