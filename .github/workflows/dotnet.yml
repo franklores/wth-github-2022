@@ -70,7 +70,7 @@ jobs:
       with:
         creds: ${{ secrets.CLIENT_SECRET }}
     
-    - uses: azure/webapps-deploy@v2
+    - uses: azure/webapps-deploy@v3
       with:
         app-name: '${{ env.webappname }}-dev'
         images: '${{ secrets.ACR_LOGIN_SERVER }}/wth/dotnetcoreapp:${{ env.tag }}'
