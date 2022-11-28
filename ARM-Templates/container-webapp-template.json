@@ -23,7 +23,7 @@
       "type": "String"
     },
     "registryName": {
-      "defaultValue": "wth-gh-table3-devopsreg",
+      "defaultValue": "wthghtable3devopsreg",
       "type": "String"
     },
     "imageName": {
