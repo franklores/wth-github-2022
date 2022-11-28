@@ -3,7 +3,10 @@ name: Azure ARM
 
 env:
   targetEnv: wth-gh-table3-devops-prod
-  
+  registryName: "wthghtable3devopsreg.azurecr.io"
+  repositoryName: "wth/dotnetcoreapp"
+  dockerFolderPath: Application/src/RazorPagesTestSample
+  tag: ${{ github.run_number }}
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
