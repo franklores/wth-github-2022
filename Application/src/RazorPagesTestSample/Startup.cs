@@ -10,7 +10,7 @@ namespace RazorPagesTestSample
     public class Startup
     {
         //comment to trigger build
-        //comment 3
+        //comment 3 adb
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("InMemoryDb"));
