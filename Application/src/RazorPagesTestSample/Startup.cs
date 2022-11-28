@@ -9,6 +9,8 @@ namespace RazorPagesTestSample
 {
     public class Startup
     {
+        //comment to trigger build
+        //comment 3
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("InMemoryDb"));
@@ -18,6 +20,7 @@ namespace RazorPagesTestSample
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            //this should trigger the workflow
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

@@ -1,1 +1,30 @@
+on: workflow_dispatch
+name: Azure ARM
 
+env:
+  targetEnv: wth-gh-table3-devops-prod
+  registryName: "wthghtable3devopsreg.azurecr.io"
+  repositoryName: "wth/dotnetcoreapp"
+  dockerFolderPath: Application/src/RazorPagesTestSample
+  tag: ${{ github.run_number }}
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+
+      # Checkout code
+    - uses: actions/checkout@main
+
+      # Log into Azure
+    - uses: azure/login@v1
+      with:
+        creds: ${{ secrets.CLIENT_SECRET }}
+
+      # Deploy ARM template
+    - name: Run ARM deploy
+      uses: azure/arm-deploy@v1
+      with:
+        subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
+        resourceGroupName: ${{ secrets.AZURE_RG }}
+        template: ./ARM-Templates/container-webapp-template.json
+        parameters: webAppName=${{ env.targetEnv }}
