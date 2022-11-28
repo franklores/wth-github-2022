@@ -2,7 +2,7 @@ on: workflow_dispatch
 name: Azure ARM
 
 env:
-  targetEnv: wth-gh-table3-devops-test
+  targetEnv: wth-gh-table3-devops-prod
   
 jobs:
   build-and-deploy:
