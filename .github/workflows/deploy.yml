@@ -1,5 +1,9 @@
 on: workflow_dispatch
 name: Azure ARM
+
+env:
+  targetEnv: wth-gh-table3-devops-test
+  
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
