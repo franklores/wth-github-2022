@@ -63,7 +63,7 @@ jobs:
   deploycontainertoApp:
 
     runs-on: ubuntu-latest
-    needs: [containerbuild, deploycontainertoApp]
+    needs: [build,containerbuild]
 
     steps:
     - uses: azure/login@v1
