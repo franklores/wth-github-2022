@@ -19,6 +19,7 @@ namespace RazorPagesTestSample
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            //this should trigger the workflow
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
