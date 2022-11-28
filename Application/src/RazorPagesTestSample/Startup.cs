@@ -9,7 +9,7 @@ namespace RazorPagesTestSample
 {
     public class Startup
     {
-        //comment to trigger build jki
+        //comment to trigger build jki hui
         //comment 3 adb ghy hyd hyfjhu
         public void ConfigureServices(IServiceCollection services)
         {
